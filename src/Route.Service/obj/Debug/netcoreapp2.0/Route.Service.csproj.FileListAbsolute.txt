@@ -1,0 +1,9 @@
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Service\bin\Debug\netcoreapp2.0\Route.Service.deps.json
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Service\bin\Debug\netcoreapp2.0\Route.Service.dll
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Service\bin\Debug\netcoreapp2.0\Route.Service.pdb
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Service\obj\Debug\netcoreapp2.0\Route.Service.csprojResolveAssemblyReference.cache
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Service\obj\Debug\netcoreapp2.0\Route.Service.csproj.CoreCompileInputs.cache
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Service\obj\Debug\netcoreapp2.0\Route.Service.AssemblyInfoInputs.cache
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Service\obj\Debug\netcoreapp2.0\Route.Service.AssemblyInfo.cs
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Service\obj\Debug\netcoreapp2.0\Route.Service.dll
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Service\obj\Debug\netcoreapp2.0\Route.Service.pdb

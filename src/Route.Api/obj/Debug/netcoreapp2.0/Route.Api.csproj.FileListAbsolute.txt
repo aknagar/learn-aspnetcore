@@ -1,0 +1,13 @@
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.deps.json
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.runtimeconfig.json
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.runtimeconfig.dev.json
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.dll
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.pdb
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.csprojResolveAssemblyReference.cache
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.csproj.CoreCompileInputs.cache
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.AssemblyInfoInputs.cache
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.AssemblyInfo.cs
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.dll
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.pdb
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\bin\Debug\netcoreapp2.0\AspNetCoreUtilities.dll
+D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\bin\Debug\netcoreapp2.0\AspNetCoreUtilities.pdb

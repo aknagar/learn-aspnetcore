@@ -1,0 +1,11 @@
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\bin\Debug\netcoreapp2.0\AspNetCoreUtilities.deps.json
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\bin\Debug\netcoreapp2.0\AspNetCoreUtilities.dll
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\bin\Debug\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Abstractions.xml
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\obj\Debug\netcoreapp2.0\AspNetCoreUtilities.csprojResolveAssemblyReference.cache
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\obj\Debug\netcoreapp2.0\AspNetCoreUtilities.csproj.CoreCompileInputs.cache
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\obj\Debug\netcoreapp2.0\AspNetCoreUtilities.AssemblyInfoInputs.cache
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\obj\Debug\netcoreapp2.0\AspNetCoreUtilities.AssemblyInfo.cs
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\bin\Debug\netcoreapp2.0\AspNetCoreUtilities.pdb
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\obj\Debug\netcoreapp2.0\AspNetCoreUtilities.dll
+D:\MyRepos\AspNetCoreRouterApi\src\AspNetCoreUtilities\obj\Debug\netcoreapp2.0\AspNetCoreUtilities.pdb
