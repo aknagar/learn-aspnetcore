@@ -6,9 +6,12 @@ Install .NET Core 2.0
 ## Checklist Web API
 # Heartbeat controller
 # DI with Autofac
-# Logging with Application Insights
+# Logging with Serilog and Application Insights as sink
 # Exception Handling
-# 
+# Authentication
+# Authorization
+# Cors
+#
 
 
 ## Call stack

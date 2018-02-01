@@ -5137,17 +5137,21 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "AspNetCoreUtilities/1.0.0": {
+      "AspNetCore.Startup.Utility/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1"
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
+          "Microsoft.ApplicationInsights.AspNetCore": "2.1.1",
+          "Microsoft.AspNetCore.All": "2.0.5",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Configuration.AzureKeyVault": "2.0.0"
         },
         "compile": {
-          "bin/placeholder/AspNetCoreUtilities.dll": {}
+          "bin/placeholder/AspNetCore.Startup.Utility.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AspNetCoreUtilities.dll": {}
+          "bin/placeholder/AspNetCore.Startup.Utility.dll": {}
         }
       }
     }
@@ -13333,15 +13337,15 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "AspNetCoreUtilities/1.0.0": {
+    "AspNetCore.Startup.Utility/1.0.0": {
       "type": "project",
-      "path": "../AspNetCoreUtilities/AspNetCoreUtilities.csproj",
-      "msbuildProject": "../AspNetCoreUtilities/AspNetCoreUtilities.csproj"
+      "path": "../AspNetCore.Startup.Utility/AspNetCore.Startup.Utility.csproj",
+      "msbuildProject": "../AspNetCore.Startup.Utility/AspNetCore.Startup.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "AspNetCoreUtilities >= 1.0.0",
+      "AspNetCore.Startup.Utility >= 1.0.0",
       "Autofac >= 4.6.2",
       "Autofac.Extensions.DependencyInjection >= 4.2.0",
       "Microsoft.ApplicationInsights.AspNetCore >= 2.1.1",
@@ -13364,11 +13368,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\MyRepos\\AspNetCoreRouterApi\\src\\Route.Api\\Route.Api.csproj",
+      "projectUniqueName": "D:\\MyRepos\\learn-aspnetcore\\src\\Route.Api\\Route.Api.csproj",
       "projectName": "Route.Api",
-      "projectPath": "D:\\MyRepos\\AspNetCoreRouterApi\\src\\Route.Api\\Route.Api.csproj",
+      "projectPath": "D:\\MyRepos\\learn-aspnetcore\\src\\Route.Api\\Route.Api.csproj",
       "packagesPath": "C:\\Users\\aknagar\\.nuget\\packages\\",
-      "outputPath": "D:\\MyRepos\\AspNetCoreRouterApi\\src\\Route.Api\\obj\\",
+      "outputPath": "D:\\MyRepos\\learn-aspnetcore\\src\\Route.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13390,8 +13394,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\MyRepos\\AspNetCoreRouterApi\\src\\AspNetCoreUtilities\\AspNetCoreUtilities.csproj": {
-              "projectPath": "D:\\MyRepos\\AspNetCoreRouterApi\\src\\AspNetCoreUtilities\\AspNetCoreUtilities.csproj"
+            "D:\\MyRepos\\learn-aspnetcore\\src\\AspNetCore.Startup.Utility\\AspNetCore.Startup.Utility.csproj": {
+              "projectPath": "D:\\MyRepos\\learn-aspnetcore\\src\\AspNetCore.Startup.Utility\\AspNetCore.Startup.Utility.csproj"
             }
           }
         }

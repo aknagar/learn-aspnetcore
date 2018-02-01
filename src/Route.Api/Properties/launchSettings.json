@@ -13,6 +13,7 @@
       "launchBrowser": true,
       "launchUrl": "api/values",
       "environmentVariables": {
+        "Test:Env": "False",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },

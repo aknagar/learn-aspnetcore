@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AspNetCoreUtilities.Middlewares
+namespace AspNetCore.Startup.Utility.Middlewares
 { 
     /// <summary>
     /// We are using middleware for exception handling, rather thant MVC filter because
@@ -40,7 +40,6 @@ namespace AspNetCoreUtilities.Middlewares
             else if (exception is UnauthorizedAccessException) code = HttpStatusCode.Unauthorized;
 
             var result = exception.Message;
-            context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
             return context.Response.WriteAsync(result);
         }

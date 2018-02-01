@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\MyRepos\\AspNetCoreRouterApi\\src\\Route.Service\\Route.Service.csproj",
+      "projectUniqueName": "D:\\MyRepos\\learn-aspnetcore\\src\\Route.Service\\Route.Service.csproj",
       "projectName": "Route.Service",
-      "projectPath": "D:\\MyRepos\\AspNetCoreRouterApi\\src\\Route.Service\\Route.Service.csproj",
+      "projectPath": "D:\\MyRepos\\learn-aspnetcore\\src\\Route.Service\\Route.Service.csproj",
       "packagesPath": "C:\\Users\\aknagar\\.nuget\\packages\\",
-      "outputPath": "D:\\MyRepos\\AspNetCoreRouterApi\\src\\Route.Service\\obj\\",
+      "outputPath": "D:\\MyRepos\\learn-aspnetcore\\src\\Route.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

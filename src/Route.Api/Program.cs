@@ -42,8 +42,7 @@ namespace Route.Api
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                
+                .UseContentRoot(Directory.GetCurrentDirectory())                
                 .ConfigureAppConfiguration((builderContext, configBuilder) =>
                 {
                     //configBuilder.SetBasePath(Directory.GetCurrentDirectory())
@@ -60,12 +59,11 @@ namespace Route.Api
                     //    config["ClientSecret"],
                     //    new PrefixKeyVaultSecretManager(versionPrefix));
                 })
-
-                .UseStartup<Startup>()
                 .UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration
                         .ReadFrom.KeyValuePairs(hostingContext.Configuration.AsEnumerable())
                         .Enrich.FromLogContext()
                         .WriteTo.ApplicationInsightsTraces(hostingContext.Configuration["InstrumentationKey"]))
+                .UseStartup<Startup>()
                 .Build();
     }
 }

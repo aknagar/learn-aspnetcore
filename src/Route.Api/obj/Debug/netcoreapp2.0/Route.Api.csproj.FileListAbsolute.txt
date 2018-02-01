@@ -11,3 +11,16 @@ D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.d
 D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.pdb
 D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\bin\Debug\netcoreapp2.0\AspNetCoreUtilities.dll
 D:\MyRepos\AspNetCoreRouterApi\src\Route.Api\bin\Debug\netcoreapp2.0\AspNetCoreUtilities.pdb
+D:\MyRepos\learn-aspnetcore\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.csprojResolveAssemblyReference.cache
+D:\MyRepos\learn-aspnetcore\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.csproj.CoreCompileInputs.cache
+D:\MyRepos\learn-aspnetcore\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.AssemblyInfoInputs.cache
+D:\MyRepos\learn-aspnetcore\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.AssemblyInfo.cs
+D:\MyRepos\learn-aspnetcore\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.dll
+D:\MyRepos\learn-aspnetcore\src\Route.Api\obj\Debug\netcoreapp2.0\Route.Api.pdb
+D:\MyRepos\learn-aspnetcore\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.deps.json
+D:\MyRepos\learn-aspnetcore\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.runtimeconfig.json
+D:\MyRepos\learn-aspnetcore\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.runtimeconfig.dev.json
+D:\MyRepos\learn-aspnetcore\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.dll
+D:\MyRepos\learn-aspnetcore\src\Route.Api\bin\Debug\netcoreapp2.0\Route.Api.pdb
+D:\MyRepos\learn-aspnetcore\src\Route.Api\bin\Debug\netcoreapp2.0\AspNetCore.Startup.Utility.dll
+D:\MyRepos\learn-aspnetcore\src\Route.Api\bin\Debug\netcoreapp2.0\AspNetCore.Startup.Utility.pdb

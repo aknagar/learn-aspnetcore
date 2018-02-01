@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
-using AspNetCoreUtilities;
-using AspNetCoreUtilities.Filters;
-using AspNetCoreUtilities.Middlewares;
+using AspNetCore.Startup.Utility;
+using AspNetCore.Startup.Utility.Security;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Authorization;
@@ -29,48 +28,24 @@ namespace Route.Api
         }
 
         public IConfiguration Configuration { get; }
+
         public IContainer ApplicationContainer { get; private set; }
 
-
         // This method gets called by the runtime. Use this method to add services to the container.
-
         // When using a third-party DI container, you must change ConfigureServices so that it returns IServiceProvider instead of void.
         // This lets ASP.NET know to use your container instead of the built in one.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddMvcCore()
-                        .AddJsonFormatters()
-                        .AddMvcOptions(mvcOptions =>
-                        {
-                            // This protects all the Controllers by default.
-                            var policy = new AuthorizationPolicyBuilder()
-                                                .RequireAuthenticatedUser()
-                                                .Build();
-                            mvcOptions.Filters.Add(new AuthorizeFilter(policy));
-                            mvcOptions.Filters.Add(new RequireHttpsAttribute());
-                            //mvcOptions.Filters.Add(typeof(ExceptionFilter));
-                        });
-
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("RequireAdministratorRole", policy => policy.RequireRole("Administrator"));
-            });
-
+            services.RegisterMvcService(Configuration); 
+            services.RegisterAuthenticationService(Configuration);
+            services.RegisterAuthoriazationService(Configuration);
+            services.RegisterCorsIfEnabled(Configuration);
             services.Configure<ConfigSettings>(Configuration);
-
-            // prevent from mapping "sub" claim to nameidentifier.
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
-            services.AddAuthentication()
-                .AddJwtBearer(options =>
-                {
-                    options.Authority = Configuration.GetValue<string>("IdentityUrl");
-                    options.Audience = "locations";
-                    options.RequireHttpsMetadata = false;
-                });
-
+            
             // Add Autofac
             var containerBuilder = new ContainerBuilder();
             containerBuilder.RegisterModule<RouteApiModule>();
+            containerBuilder.RegisterModule<HttpPipelineUtilityModule>();
             containerBuilder.Populate(services);
             this.ApplicationContainer = containerBuilder.Build();
             return new AutofacServiceProvider(this.ApplicationContainer);
@@ -79,15 +54,22 @@ namespace Route.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            
+            // here sequence of middlewares is important
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseAuthentication();
-
             // It should be before UseMvc()
             //app.UseErrorHandling();
+
+            app.UseHttps();
+
+            app.UseCorrelation();
+
+            app.UseAuthentication();
+            app.UseCors("AllowSpecificOrigin");
 
             app.UseMvc();
         }

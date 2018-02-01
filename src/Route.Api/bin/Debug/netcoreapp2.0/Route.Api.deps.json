@@ -23,7 +23,7 @@
     ".NETCoreApp,Version=v2.0": {
       "Route.Api/1.0.0": {
         "dependencies": {
-          "AspNetCoreUtilities": "1.0.0",
+          "AspNetCore.Startup.Utility": "1.0.0",
           "Autofac": "4.6.2",
           "Autofac.Extensions.DependencyInjection": "4.2.0",
           "Microsoft.ApplicationInsights.AspNetCore": "2.1.1",
@@ -4162,15 +4162,19 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "AspNetCoreUtilities/1.0.0": {
+      "AspNetCore.Startup.Utility/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1"
+          "Autofac.Extensions.DependencyInjection": "4.2.0",
+          "Microsoft.ApplicationInsights.AspNetCore": "2.1.1",
+          "Microsoft.AspNetCore.All": "2.0.5",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Configuration.AzureKeyVault": "2.0.0"
         },
         "runtime": {
-          "AspNetCoreUtilities.dll": {}
+          "AspNetCore.Startup.Utility.dll": {}
         },
         "compile": {
-          "AspNetCoreUtilities.dll": {}
+          "AspNetCore.Startup.Utility.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.0": {
@@ -6534,7 +6538,7 @@
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
-    "AspNetCoreUtilities/1.0.0": {
+    "AspNetCore.Startup.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

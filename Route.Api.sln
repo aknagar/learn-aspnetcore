@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Route.Api", "src\Route.Api\Route.Api.csproj", "{BD6D8403-560E-4718-9C61-124C8E1E526C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreUtilities", "src\AspNetCoreUtilities\AspNetCoreUtilities.csproj", "{EC7B6C87-C722-4C4F-B0E9-793F63931FE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Route.Api", "src\Route.Api\Route.Api.csproj", "{BD6D8403-560E-4718-9C61-124C8E1E526C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Route.Service", "src\Route.Service\Route.Service.csproj", "{76BA68F5-9982-4A75-8729-44E24CDB1591}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore.Startup.Utility", "src\AspNetCore.Startup.Utility\AspNetCore.Startup.Utility.csproj", "{66704393-31AE-4A5B-A87D-4CFF19294FC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{BD6D8403-560E-4718-9C61-124C8E1E526C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD6D8403-560E-4718-9C61-124C8E1E526C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD6D8403-560E-4718-9C61-124C8E1E526C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC7B6C87-C722-4C4F-B0E9-793F63931FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC7B6C87-C722-4C4F-B0E9-793F63931FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC7B6C87-C722-4C4F-B0E9-793F63931FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC7B6C87-C722-4C4F-B0E9-793F63931FE2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{76BA68F5-9982-4A75-8729-44E24CDB1591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{76BA68F5-9982-4A75-8729-44E24CDB1591}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76BA68F5-9982-4A75-8729-44E24CDB1591}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76BA68F5-9982-4A75-8729-44E24CDB1591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66704393-31AE-4A5B-A87D-4CFF19294FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66704393-31AE-4A5B-A87D-4CFF19294FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66704393-31AE-4A5B-A87D-4CFF19294FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66704393-31AE-4A5B-A87D-4CFF19294FC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

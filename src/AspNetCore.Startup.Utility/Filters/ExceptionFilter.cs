@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace AspNetCoreUtilities.Filters
+namespace AspNetCore.Startup.Utility.Filters
 {
     public class ExceptionFilter : IExceptionFilter
     {
