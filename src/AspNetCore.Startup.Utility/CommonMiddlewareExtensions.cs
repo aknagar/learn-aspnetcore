@@ -22,5 +22,10 @@ namespace AspNetCore.Startup.Utility
         {
             return builder.UseMiddleware<CorrelationMiddleware>();
         }
+
+        public static IApplicationBuilder UseRequestResponseLogging(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<RequestResponseLoggingMiddleware>();
+        }
     }
 }

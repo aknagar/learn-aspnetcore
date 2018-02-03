@@ -22,7 +22,8 @@ namespace AspNetCore.Startup.Utility.Security
                                                 .RequireAuthenticatedUser()
                                                 .Build();
                             mvcOptions.Filters.Add(new AuthorizeFilter(policy));
-                        });
+                        })
+                        .AddApiExplorer();  //Required for Swagger UI
 
             return services;
         }
