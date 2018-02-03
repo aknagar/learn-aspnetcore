@@ -38,7 +38,7 @@ namespace Route.Api
         {
             services.RegisterMvcService(Configuration); 
             services.RegisterAuthenticationService(Configuration);
-            services.RegisterAuthoriazationService(Configuration);
+            services.RegisterAuthoriazationServiceIfEnabled(Configuration);
             services.RegisterCorsIfEnabled(Configuration);
             services.Configure<ConfigSettings>(Configuration);
             
@@ -61,17 +61,21 @@ namespace Route.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("AllowSpecificOrigins");
+
             // It should be before UseMvc()
-            //app.UseErrorHandling();
-
+            app.UseErrorHandling();
             app.UseHttps();
-
             app.UseCorrelation();
-
             app.UseAuthentication();
-            app.UseCors("AllowSpecificOrigin");
-
             app.UseMvc();
+
+            
+
+            
+            
+
+            
         }
     }
 }

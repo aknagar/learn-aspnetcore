@@ -18,12 +18,10 @@ namespace AspNetCore.Startup.Utility.Security
                         .AddMvcOptions(mvcOptions =>
                         {
                             // This protects all the Controllers by default.
-                            //var policy = new AuthorizationPolicyBuilder()
-                            //                    .RequireAuthenticatedUser()
-                            //                    .Build();
-                            //mvcOptions.Filters.Add(new AuthorizeFilter(policy));
-                            //mvcOptions.Filters.Add(new RequireHttpsAttribute());
-                            //mvcOptions.Filters.Add(typeof(ExceptionFilter));
+                            var policy = new AuthorizationPolicyBuilder()
+                                                .RequireAuthenticatedUser()
+                                                .Build();
+                            mvcOptions.Filters.Add(new AuthorizeFilter(policy));
                         });
 
             return services;

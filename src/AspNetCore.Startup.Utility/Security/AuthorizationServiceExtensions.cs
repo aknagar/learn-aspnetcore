@@ -8,22 +8,26 @@ namespace AspNetCore.Startup.Utility.Security
 {
     public static class AuthorizationServiceExtensions
     {
-        public static IServiceCollection RegisterAuthoriazationService(this IServiceCollection services, IConfiguration configuratioin)
+        public static IServiceCollection RegisterAuthoriazationService(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddAuthorization(options =>
-            {
-                //options.AddPolicy("RequireAdministratorRole", policy => policy.RequireRole("Administrator"));
-            });
+            services
+                .AddAuthorizationPolicyEvaluator()
+                .AddAuthorization();
+            //services.AddAuthorization(options =>
+            //{
+            //    options.DefaultPolicy
+            //    //options.AddPolicy("RequireAdministratorRole", policy => policy.RequireRole("Administrator"));
+            //});
 
             return services;
         }
 
-        public static IServiceCollection RegisterAuthoriazationServiceIfEnabled(this IServiceCollection services, IConfiguration configuratioin)
+        public static IServiceCollection RegisterAuthoriazationServiceIfEnabled(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddAuthorization(options =>
+            if (configuration.GetValue<bool>("Authorization:IsEnabled"))
             {
-                //options.AddPolicy("RequireAdministratorRole", policy => policy.RequireRole("Administrator"));
-            });
+                return services.RegisterAuthoriazationService(configuration);
+            }
 
             return services;
         }

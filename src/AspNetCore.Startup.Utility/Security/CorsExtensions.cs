@@ -10,10 +10,10 @@ namespace AspNetCore.Startup.Utility.Security
     {
         public static IServiceCollection RegisterCors(this IServiceCollection services, IConfiguration configuration)
         {
-            var allowedOrigins = configuration.GetValue<string>("CorsAllowedOrigins");
+            var allowedOrigins = configuration.GetValue<string>("Cors:AllowedOrigins");
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowSpecificOrigin",
+                options.AddPolicy("AllowSpecificOrigins",
                     builder => builder.WithOrigins(allowedOrigins.Split(',')));
             });
 
@@ -22,7 +22,7 @@ namespace AspNetCore.Startup.Utility.Security
 
         public static IServiceCollection RegisterCorsIfEnabled(this IServiceCollection services, IConfiguration configuration)
         {
-            if (configuration.GetValue<bool>("IsCorsEnabled"))
+            if (configuration.GetValue<bool>("Cors:IsEnabled"))
             {
                 return services.RegisterCors(configuration);
             }

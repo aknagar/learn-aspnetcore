@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -13,18 +14,23 @@ namespace AspNetCore.Startup.Utility.Middlewares
     /// </summary>
     public class ErrorHandlingMiddleware
     {
-        private readonly RequestDelegate next;
+        private readonly RequestDelegate _next;
 
-        public ErrorHandlingMiddleware(RequestDelegate next)
+        private readonly ILogger<ErrorHandlingMiddleware> _logger;
+
+        private const string ErrorMessage = "Oops, something went wrong. If problem persists contact customer support";
+
+        public ErrorHandlingMiddleware(RequestDelegate next, ILogger<ErrorHandlingMiddleware> logger)
         {
-            this.next = next;
+            _next = next;
+            _logger = logger;
         }
 
-        public async Task Invoke(HttpContext context /* other scoped dependencies */)
+        public async Task Invoke(HttpContext context)
         {
             try
             {
-                await next(context);
+                await _next(context);
             }
             catch (Exception ex)
             {
@@ -32,16 +38,17 @@ namespace AspNetCore.Startup.Utility.Middlewares
             }
         }
 
-        private static Task HandleExceptionAsync(HttpContext context, Exception exception)
+        private Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            var code = HttpStatusCode.InternalServerError; // 500 if unexpected
+            var statusCode = HttpStatusCode.InternalServerError; // 500 if unexpected
 
-            if (exception is NotImplementedException) code = HttpStatusCode.NotImplemented;
-            else if (exception is UnauthorizedAccessException) code = HttpStatusCode.Unauthorized;
+            if (exception is NotImplementedException) statusCode = HttpStatusCode.NotImplemented;
+            else if (exception is UnauthorizedAccessException) statusCode = HttpStatusCode.Unauthorized;
+            
+            context.Response.StatusCode = (int)statusCode;
+            _logger.LogError(exception, "Unhandled Exception");
 
-            var result = exception.Message;
-            context.Response.StatusCode = (int)code;
-            return context.Response.WriteAsync(result);
+            return context.Response.WriteAsync(ErrorMessage);
         }
 
     }

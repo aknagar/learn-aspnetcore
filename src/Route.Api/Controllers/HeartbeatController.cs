@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Route.Api.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Heartbeat")]
+    [Route("api/v1/heartbeat")]
     public class HeartbeatController : Controller
     {
         public Task<string> Get()

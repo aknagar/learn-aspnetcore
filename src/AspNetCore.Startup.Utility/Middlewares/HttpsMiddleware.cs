@@ -25,13 +25,14 @@ namespace AspNetCore.Startup.Utility.Middlewares
 
         public async Task Invoke(HttpContext context /* other scoped dependencies */)
         {
-            if (context.Request.Scheme != Uri.UriSchemeHttps && !IsForwardedSsl(context))
+            if (context.Request.IsHttps || IsForwardedSsl(context))
             {
-                await HandleAsync(context);                
+                await next(context);
+                               
             }
             else
             {
-                await next(context);
+                await HandleAsync(context);
             }            
         }
 

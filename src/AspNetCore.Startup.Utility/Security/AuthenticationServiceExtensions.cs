@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -11,7 +12,7 @@ namespace AspNetCore.Startup.Utility.Security
     {
         public static IServiceCollection RegisterAuthenticationService(this IServiceCollection services, IConfiguration configuratioin)
         {
-           services.AddAuthentication()
+           services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .RegisterJwtBearerAuthenticationIfEnabled(configuratioin);
 
             return services;
