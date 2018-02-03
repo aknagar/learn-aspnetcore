@@ -12,6 +12,8 @@ Install .NET Core 2.0
 # Authorization
 # Cors
 # API Versioning
+# Swagger
+# Dockerize
 
 
 ## Call stack
@@ -109,4 +111,11 @@ UseCors() middleware to allow cross-origin ajax requests.
 
 
 
+## Docker
+To run docker container from Visual Studio, make docker-compose as startup project and execute
 
+### Tagging
+`docker tag route.api:dev aknagar/learn-aspnetcore:0.0.1`
+
+### Push to docker
+`docker push aknagar/learn-aspnetcore`

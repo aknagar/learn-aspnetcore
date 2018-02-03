@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  route.api:
+    image: route.api
+    build:
+      context: .
+      dockerfile: src\Route.Api\Dockerfile
